@@ -1,20 +1,14 @@
 <?php
-  $db_host = 'localhost';
-  $db_user = 'root';
-  $db_password = 'root';
-  $db_db = 'information_schema';
- 
-  $mysqli = @new mysqli(
-    $db_host,
-    $db_user,
-    $db_password,
-    $db_db
-  );
-	
-  if ($mysqli->connect_error) {
-    echo 'Errno: '.$mysqli->connect_errno;
-    echo '<br>';
-    echo 'Error: '.$mysqli->connect_error;
-    exit();
-  }
+if($_SERVER['HTTP_HOST'] == 'localhost'){
+          define('HOST', 'localhost');
+          define('USER', 'root');
+          define('PASSWORD', 'root');
+          define('DB', 'catalog');
+        } else {
+          define('HOST', 'hidden');
+          define('USER', 'hidden');
+          define('PASSWORD', 'hidden');
+          define('DB', 'hidden');
+        }
+$connect = mysqli_connect(HOST, USER, PASSWORD, DB);
 ?>

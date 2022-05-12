@@ -5,27 +5,40 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
-	<script src="js/jquery-3.6.0.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+	<link type="text/css" rel="stylesheet" href="css/bootstrap-grid.css">
 	<script src="js/bootstrap.bundle.js"></script>
 	<script src="js/script.js" defer></script>
-
 	<title>Guitars Online</title>
 </head>
 <body>
-	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-		<a href="#" class="navbar-brand">Guitars Online</a>
-		<button class="navbar-toggler" data-toggle="collapse" data-target="#main-nav">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div id="main-nav" class="collapse navbar-collapse">
-			<ul class="navbar-nav justify-content-around">
-				<li class="nav-item"><a class="nav-link" href="#">Guitars</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Amps</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Cart</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
-			</ul>
-		</div>
-	</nav> 
+<?php include_once("header.php");?>
+
+
+//TODO: Add some basic content for home page with links
+<div class="container">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img class="d-block w-100" src="" alt="First slide">
+        </div>
+        <div class="carousel-item">
+        <img class="d-block w-100" src="" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+        <img class="d-block w-100" src="i" alt="Third slide">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    </div>
+</div>
+
 </body>
 </html>
